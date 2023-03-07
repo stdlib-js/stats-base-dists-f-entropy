@@ -32,10 +32,14 @@ The [differential entropy][entropy] (in [nats][nats]) for a [F][f-distribution] 
 
 <!-- <equation class="equation" label="eq:f_entropy" align="center" raw="h\left( X \right) = \ln\left( \tfrac{d_2}{d_1} \Gamma\left( \tfrac{d_1}{2} \right) \Gamma\left( \tfrac{d_2}{2} \right) \Gamma\left( \tfrac{d_1+d_2}{2} \right) \right) \\ + \left( 1-\tfrac{d_1}{2} \right) \Psi\left( \tfrac{d_1}{2} \right) +  \left( 1-\tfrac{d_2}{2} \right) \Psi\left( \tfrac{d_2}{2} \right) + \tfrac{d_1+d_2}{2} \Psi\left( \tfrac{d_1+d_2}{2} \right)" alt="Differential entropy for an F distribution."> -->
 
-<div class="equation" align="center" data-raw-text="h\left( X \right) = \ln\left( \tfrac{d_2}{d_1} \Gamma\left( \tfrac{d_1}{2} \right) \Gamma\left( \tfrac{d_2}{2} \right) \Gamma\left( \tfrac{d_1+d_2}{2} \right) \right) \\ + \left( 1-\tfrac{d_1}{2} \right) \Psi\left( \tfrac{d_1}{2} \right) +  \left( 1-\tfrac{d_2}{2} \right) \Psi\left( \tfrac{d_2}{2} \right) + \tfrac{d_1+d_2}{2} \Psi\left( \tfrac{d_1+d_2}{2} \right)" data-equation="eq:f_entropy">
+```math
+h\left( X \right) = \ln\left( \tfrac{d_2}{d_1} \Gamma\left( \tfrac{d_1}{2} \right) \Gamma\left( \tfrac{d_2}{2} \right) \Gamma\left( \tfrac{d_1+d_2}{2} \right) \right) \\ + \left( 1-\tfrac{d_1}{2} \right) \Psi\left( \tfrac{d_1}{2} \right) +  \left( 1-\tfrac{d_2}{2} \right) \Psi\left( \tfrac{d_2}{2} \right) + \tfrac{d_1+d_2}{2} \Psi\left( \tfrac{d_1+d_2}{2} \right)
+```
+
+<!-- <div class="equation" align="center" data-raw-text="h\left( X \right) = \ln\left( \tfrac{d_2}{d_1} \Gamma\left( \tfrac{d_1}{2} \right) \Gamma\left( \tfrac{d_2}{2} \right) \Gamma\left( \tfrac{d_1+d_2}{2} \right) \right) \\ + \left( 1-\tfrac{d_1}{2} \right) \Psi\left( \tfrac{d_1}{2} \right) +  \left( 1-\tfrac{d_2}{2} \right) \Psi\left( \tfrac{d_2}{2} \right) + \tfrac{d_1+d_2}{2} \Psi\left( \tfrac{d_1+d_2}{2} \right)" data-equation="eq:f_entropy">
     <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@591cf9d5c3a0cd3c1ceec961e5c49d73a68374cb/lib/node_modules/@stdlib/stats/base/dists/f/entropy/docs/img/equation_f_entropy.svg" alt="Differential entropy for an F distribution.">
     <br>
-</div>
+</div> -->
 
 <!-- </equation> -->
 
@@ -229,7 +233,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 -->
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://gitter.im/stdlib-js/stdlib/
+[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
