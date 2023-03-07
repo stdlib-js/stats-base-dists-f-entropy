@@ -32,10 +32,14 @@ The [differential entropy][entropy] (in [nats][nats]) for a [F][f-distribution] 
 
 <!-- <equation class="equation" label="eq:f_entropy" align="center" raw="h\left( X \right) = \ln\left( \tfrac{d_2}{d_1} \Gamma\left( \tfrac{d_1}{2} \right) \Gamma\left( \tfrac{d_2}{2} \right) \Gamma\left( \tfrac{d_1+d_2}{2} \right) \right) \\ + \left( 1-\tfrac{d_1}{2} \right) \Psi\left( \tfrac{d_1}{2} \right) +  \left( 1-\tfrac{d_2}{2} \right) \Psi\left( \tfrac{d_2}{2} \right) + \tfrac{d_1+d_2}{2} \Psi\left( \tfrac{d_1+d_2}{2} \right)" alt="Differential entropy for an F distribution."> -->
 
-<div class="equation" align="center" data-raw-text="h\left( X \right) = \ln\left( \tfrac{d_2}{d_1} \Gamma\left( \tfrac{d_1}{2} \right) \Gamma\left( \tfrac{d_2}{2} \right) \Gamma\left( \tfrac{d_1+d_2}{2} \right) \right) \\ + \left( 1-\tfrac{d_1}{2} \right) \Psi\left( \tfrac{d_1}{2} \right) +  \left( 1-\tfrac{d_2}{2} \right) \Psi\left( \tfrac{d_2}{2} \right) + \tfrac{d_1+d_2}{2} \Psi\left( \tfrac{d_1+d_2}{2} \right)" data-equation="eq:f_entropy">
+```math
+h\left( X \right) = \ln\left( \tfrac{d_2}{d_1} \Gamma\left( \tfrac{d_1}{2} \right) \Gamma\left( \tfrac{d_2}{2} \right) \Gamma\left( \tfrac{d_1+d_2}{2} \right) \right) \\ + \left( 1-\tfrac{d_1}{2} \right) \Psi\left( \tfrac{d_1}{2} \right) +  \left( 1-\tfrac{d_2}{2} \right) \Psi\left( \tfrac{d_2}{2} \right) + \tfrac{d_1+d_2}{2} \Psi\left( \tfrac{d_1+d_2}{2} \right)
+```
+
+<!-- <div class="equation" align="center" data-raw-text="h\left( X \right) = \ln\left( \tfrac{d_2}{d_1} \Gamma\left( \tfrac{d_1}{2} \right) \Gamma\left( \tfrac{d_2}{2} \right) \Gamma\left( \tfrac{d_1+d_2}{2} \right) \right) \\ + \left( 1-\tfrac{d_1}{2} \right) \Psi\left( \tfrac{d_1}{2} \right) +  \left( 1-\tfrac{d_2}{2} \right) \Psi\left( \tfrac{d_2}{2} \right) + \tfrac{d_1+d_2}{2} \Psi\left( \tfrac{d_1+d_2}{2} \right)" data-equation="eq:f_entropy">
     <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@591cf9d5c3a0cd3c1ceec961e5c49d73a68374cb/lib/node_modules/@stdlib/stats/base/dists/f/entropy/docs/img/equation_f_entropy.svg" alt="Differential entropy for an F distribution.">
     <br>
-</div>
+</div> -->
 
 <!-- </equation> -->
 
@@ -47,38 +51,30 @@ where `d1` is the numerator degrees of freedom, `d2` is the denominator degrees 
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-base-dists-f-entropy
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-entropy = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-f-entropy@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var entropy = require( 'path/to/vendor/umd/stats-base-dists-f-entropy/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-f-entropy@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.entropy;
-})();
-</script>
+var entropy = require( '@stdlib/stats-base-dists-f-entropy' );
 ```
 
 #### entropy( d1, d2 )
@@ -146,15 +142,10 @@ v = entropy( 3.0, -1.0 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-eps@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-f-entropy@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var randu = require( '@stdlib/random-base-randu' );
+var EPS = require( '@stdlib/constants-float64-eps' );
+var entropy = require( '@stdlib/stats-base-dists-f-entropy' );
 
 var d1;
 var d2;
@@ -167,11 +158,6 @@ for ( i = 0; i < 10; i++ ) {
     v = entropy( d1, d2 );
     console.log( 'd1: %d, d2: %d, h(X;d1,d2): %d', d1.toFixed( 4 ), d2.toFixed( 4 ), v.toFixed( 4 ) );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -247,7 +233,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 -->
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://gitter.im/stdlib-js/stdlib/
+[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
