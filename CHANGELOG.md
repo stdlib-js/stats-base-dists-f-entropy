@@ -2,6 +2,63 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2024-12-20)
+
+<section class="features">
+
+### Features
+
+-   [`df52159`](https://github.com/stdlib-js/stdlib/commit/df521591cd6b8d5bb9cfa241e241231d45319285) - add C implementation for `stats/base/dists/f/entropy` [(#4044)](https://github.com/stdlib-js/stdlib/pull/4044)
+
+</section>
+
+<!-- /.features -->
+
+<section class="issues">
+
+### Closed Issues
+
+This release closes the following issue:
+
+[#3595](https://github.com/stdlib-js/stdlib/issues/3595)
+
+</section>
+
+<!-- /.issues -->
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`df52159`](https://github.com/stdlib-js/stdlib/commit/df521591cd6b8d5bb9cfa241e241231d45319285) - **feat:** add C implementation for `stats/base/dists/f/entropy` [(#4044)](https://github.com/stdlib-js/stdlib/pull/4044) _(by Vivek maurya, Philipp Burckhardt)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 2 people contributed to this release. Thank you to the following contributors:
+
+-   Philipp Burckhardt
+-   Vivek maurya
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.2.2">
 
 ## 0.2.2 (2024-07-28)
